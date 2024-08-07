@@ -152,12 +152,7 @@ const progressBarContainer = document.querySelector(".progressContainer");
 const songListContainer = document.querySelector(".songListContainer");
 
 allSongs.addEventListener("click",() => {
-    if(songListContainer){
-        alert("First close songList")
-    }
-    else{
         window.location.reload()
-    }
 })
 
 function btnActive(){
