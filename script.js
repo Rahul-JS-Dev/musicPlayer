@@ -277,6 +277,7 @@ songs2.forEach((e) => {
             card.classList = "songCard";
             const cardImage = document.createElement("img");
             cardImage.src = `./Assests/songList/${e.movieName}/covers/${e.movieSongList[i]}.jpg`;
+            cardImage.alt = "COMING SOON"
             musicContainer.appendChild(card)
             card.appendChild(cardImage)
 
