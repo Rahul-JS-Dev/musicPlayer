@@ -110,6 +110,27 @@ const songs = [
     {
         SongName:"Hua Main",
     },
+    {
+        SongName:"Hailla Hailla",
+    },
+    {
+        SongName:"Idhar Chala Main Udhar Chala",
+    },
+    {
+        SongName:"In Panchhiyon",
+    },
+    {
+        SongName:"Its Magic",
+    },
+    {
+        SongName:"Jaadu Jaadu",
+    },
+    {
+        SongName:"Jadoo Jadoo",
+    },
+    {
+        SongName:"Koi Mil Gaya",
+    },
     
 ]
 
