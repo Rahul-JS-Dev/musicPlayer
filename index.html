@@ -3,52 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <title>Music Player</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <title>Music Player</title>
 </head>
 <body>
-    
-    <!-- <div class="musicContainer">
-        <div class="musicBox">
-            <div class="musicImg"></div>
-            <p>Song 1</p>
+    <div class="bgFilter">
+    <div class="contianer">
+        <form>
+        <div class="userName">
+            <input id="user" type="text" placeholder="Username" required>
         </div>
-        <div class="musicBox">
-            <div class="musicImg"></div>
-            <p>Song 2</p>
+        <div class="password">
+            <input id="password" type="password" placeholder="Password" required>
         </div>
-        <div class="musicBox">
-            <div class="musicImg"></div>
-            <p>Song 3</p>
-        </div>
-    </div> -->
-    <div class="cardMusicContainer">
-        <!-- <div class="songCard">
-            <div class="activeSong">
-                <img src="./Assests/icons/play.png" alt="">
-            </div>
-        </div> -->
+        <div class="logIn">LOG IN</div>
+    </form>
     </div>
-    <div class="songListContainer">
-    </div>
-    <div class="masterPlayContainer">
-        <div class="progressContainer">
-            <div class="progressBar">
-                <div class="progressDot"></div>
-            </div>
-        </div>
-        <div class="masterPlay">
-            <button id="allSongs">All Songs</button>
-            <button id="prev">Prev</button>
-            <button id="play">Play</button>
-            <button id="next">Next</button>
-            <button id="songList">Song List</button>
-        </div>
-    </div>
+</div>
 </body>
 </html>
