@@ -221,11 +221,13 @@ const progressBar = document.querySelector(".progressBar");
 const progressBarContainer = document.querySelector(".progressContainer");
 const songListContainer = document.querySelector(".songListContainer");
 const logoutBtn = document.querySelector("#logout");
-const songCard = document.querySelector(".songCard")
+const songCard = document.querySelector(".songCard");
+// const downloadBtn = document.querySelector("#download");
 
 logoutBtn.addEventListener("click",() => {
     window.location.href = "../index.html"
 })
+
 
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -257,7 +259,6 @@ const player = new Audio();
             songIndex = 0
         }
         songLoad(songs[songIndex])
-        setActiveMusic()
         player.play()
         playBtn.innerText = "Paused"
     }
@@ -268,7 +269,6 @@ const player = new Audio();
             songIndex = songs.length-1
         }
         songLoad(songs[songIndex])
-        setActiveMusic()
         player.play()
         playBtn.innerText = "Paused"
     }
@@ -281,7 +281,6 @@ playBtn.addEventListener("click",() => {
     if(player.paused){
         player.play()
         playBtn.innerText = "Paused"
-        setActiveMusic()
         console.log(player.duration);
     }
     else {
@@ -302,6 +301,7 @@ songs.forEach((e,index) => {
     card.addEventListener("click",() => {
         songIndex = index;
         songLoad(songs[songIndex]);
+        // songDownload(songs[songIndex])
         player.play();
         playBtn.innerText = "Paused"
     })
@@ -357,20 +357,9 @@ songs2.forEach((e) => {
     })
 })
 
-// function setActiveMusic(){
-//     const allSong = document.querySelectorAll(".cardMusicContainer .songCard");
-//    allSong.forEach((el,index) => {
-//     el.classList.remove(".activeMusic")
-//     if(index === songIndex){
-//         el.classList.add(".activeMusic")
-//     }
-//     console.log(el,index);
-//    })
-// }
 
 player.addEventListener("timeupdate",updateProgress)
 progressBarContainer.addEventListener("click",setProgressBar)
 player.addEventListener("ended",nextSong)
-
 
 
