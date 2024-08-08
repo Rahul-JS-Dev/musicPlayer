@@ -167,6 +167,12 @@ const songs = [
     {
         SongName:"Ishq Jaisa Kuch",
     },
+    {
+        SongName:"Duur Na Karin",
+    },
+    {
+        SongName:"Hauli Hauli",
+    },
 ]
 
 const songs2 = [
