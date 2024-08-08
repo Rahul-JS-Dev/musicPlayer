@@ -131,7 +131,42 @@ const songs = [
     {
         SongName:"Koi Mil Gaya",
     },
-    
+    {
+        SongName:"Ram Siya Ram",
+    },
+    {
+        SongName:"Shivoham",
+    },
+    {
+        SongName:"Huppa Huiya",
+    },
+    {
+        SongName:"Jhoome Jo Pathaan",
+    },
+    {
+        SongName:"Besharam Rang",
+    },
+    {
+        SongName:"Bekaar Dil",
+    },
+    {
+        SongName:"Dil Chah Raha Hai",
+    },
+    {
+        SongName:"Mitti",
+    },
+    {
+        SongName:"Dil Banaane Waaleya",
+    },
+    {
+        SongName:"Heer Aasmani",
+    },
+    {
+        SongName:"Sher Khul Gaye",
+    },
+    {
+        SongName:"Ishq Jaisa Kuch",
+    },
 ]
 
 const songs2 = [
@@ -158,6 +193,10 @@ const songs2 = [
     {
         movieName:"Adipurush",
         movieSongList:["Ram Siya Ram","Shivoham","Huppa Huiya"]
+    },
+    {
+        movieName:"Fighter",
+        movieSongList:["Bekaar Dil","Dil Chah Raha Hai","Mitti","Dil Banaane Waaleya","Heer Aasmani","Sher Khul Gaye","Ishq Jaisa Kuch"]
     }
 ]
 let songIndex = 0
@@ -290,7 +329,7 @@ songs2.forEach((e) => {
             const card = document.createElement("div");
             card.classList = "songCard";
             const cardImage = document.createElement("img");
-            cardImage.src = `./Assests/songList/${e.movieName}/covers/${e.movieSongList[i]}.jpg`;
+            cardImage.src = `../Assests/songList/${e.movieName}/covers/${e.movieSongList[i]}.jpg`;
             cardImage.alt = "COMING SOON"
             musicContainer.appendChild(card)
             card.appendChild(cardImage)
@@ -298,9 +337,9 @@ songs2.forEach((e) => {
             
 
             card.addEventListener("click",() => {
-                player.src = `./Assests/songList/${e.movieName}/songs/${e.movieSongList[i]}.mp3`;
+                player.src = `../Assests/songList/${e.movieName}/songs/${e.movieSongList[i]}.mp3`;
                 player.play();
-                console.log(`./Assests/songList/${e.movieName}/songs/${e.movieSongList[i]}.mp3`);
+                console.log(`../Assests/songList/${e.movieName}/songs/${e.movieSongList[i]}.mp3`);
                 playBtn.innerText = "Paused"
             })
         }
