@@ -197,6 +197,10 @@ const songs2 = [
     {
         movieName:"Fighter",
         movieSongList:["Bekaar Dil","Dil Chah Raha Hai","Mitti","Dil Banaane Waaleya","Heer Aasmani","Sher Khul Gaye","Ishq Jaisa Kuch"]
+    },
+    {
+        movieName:"Khel Khel Mein",
+        movieSongList:["Duur Na Karin","Hauli Hauli"]
     }
 ]
 let songIndex = 0
@@ -211,6 +215,7 @@ const progressBar = document.querySelector(".progressBar");
 const progressBarContainer = document.querySelector(".progressContainer");
 const songListContainer = document.querySelector(".songListContainer");
 const logoutBtn = document.querySelector("#logout");
+const songCard = document.querySelector(".songCard")
 
 logoutBtn.addEventListener("click",() => {
     window.location.href = "../index.html"
@@ -346,16 +351,16 @@ songs2.forEach((e) => {
     })
 })
 
-function setActiveMusic(){
-    const allSong = document.querySelectorAll(".cardMusicContainer .songCard");
-   allSong.forEach((el,index) => {
-    el.classList.remove(".activeMusic")
-    if(index === songIndex){
-        el.classList.add(".activeMusic")
-    }
-    console.log(el,index);
-   })
-}
+// function setActiveMusic(){
+//     const allSong = document.querySelectorAll(".cardMusicContainer .songCard");
+//    allSong.forEach((el,index) => {
+//     el.classList.remove(".activeMusic")
+//     if(index === songIndex){
+//         el.classList.add(".activeMusic")
+//     }
+//     console.log(el,index);
+//    })
+// }
 
 player.addEventListener("timeupdate",updateProgress)
 progressBarContainer.addEventListener("click",setProgressBar)
