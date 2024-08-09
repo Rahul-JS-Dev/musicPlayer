@@ -223,7 +223,24 @@ const songListContainer = document.querySelector(".songListContainer");
 const logoutBtn = document.querySelector("#logout");
 const songCard = document.querySelector(".songCard");
 // const downloadBtn = document.querySelector("#download");
+const currentTime = document.querySelector("#currentTime");
+const duration = document.querySelector("#duration");
 
+const player = new Audio();
+
+function songTime(seconds){
+    const minutes = Math.floor(seconds/60);
+    const second = Math.floor(seconds%60);
+    return `${String(minutes).padStart(2, '0')}:${String(second).padStart(2, '0')}`;
+}
+
+player.addEventListener('loadedmetadata', () => {
+    duration.textContent = songTime(player.duration);
+});
+
+player.addEventListener('timeupdate', () => {
+    currentTime.textContent = songTime(player.currentTime);
+});
 logoutBtn.addEventListener("click",() => {
     window.location.href = "../index.html"
 })
@@ -245,7 +262,7 @@ allSongs.addEventListener("click",() => {
 function btnActive(){
     this.classList.add("active")
 }
-const player = new Audio();
+
 
     function songLoad(songs) {
         player.src = `../Assests/defaultSongs/${songs.SongName}.mp3`
@@ -361,5 +378,6 @@ songs2.forEach((e) => {
 player.addEventListener("timeupdate",updateProgress)
 progressBarContainer.addEventListener("click",setProgressBar)
 player.addEventListener("ended",nextSong)
+
 
 
